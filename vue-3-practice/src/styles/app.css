@@ -1,0 +1,48 @@
+/* fyi: entire app width/padding is set by main.css */
+
+.app-container {
+    font-family: "Courier New", Courier, monospace;
+    color: #212121;
+    margin: 0px;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: #212121;
+    color: white;
+    padding: 5px 10px;
+    /* margin: 5px; */
+  }
+  
+  header a {
+    color: orange;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-toggle {
+    /* height: 30px;
+    width: 100px; */
+    padding: 3px 10px 5px;
+    margin-left: 8px;
+    background-color: #212121;
+    border: .5px solid rgba(255,255,255,0.4);
+    border-radius: 5px;
+    color: #888
+}
+
+
+.nav-toggle:hover {
+    border: .5px solid white;
+    color: white;
+}
+
+main {
+    padding: 10px 20px;
+}
