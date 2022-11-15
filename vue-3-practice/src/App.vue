@@ -3,15 +3,15 @@
     <!-- HEADER -->
     <header>
       <div class="top-bar">
-        <h1>vue 3 practice</h1>
-        <button class="nav-toggle" @click.prevent="handleToggle()">
-          show nav
+        <h1>Vue3 practice</h1>
+        <button class="nav-toggle" @click.prevent="handleNavToggle()">
+          {{ navCommand }} nav
         </button>
       </div>
       <!-- NAV / ROUTES -->
-      <nav v-if="toggle">
+      <nav v-if="navToggle">
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link to="/muse1">Muse 1</router-link>
       </nav>
     </header>
     <!-- MAIN -->
@@ -70,14 +70,16 @@ export default {
 
     // METHODS
 
-    const toggle = ref(true);
-
-    const handleToggle = () => {
-      // alert("Moin!");
-      toggle.value = !toggle.value;
+    const navToggle = ref(true);
+    const navCommand = ref("hide");
+    const handleNavToggle = () => {
+      navToggle.value = !navToggle.value;
+      navToggle.value
+        ? (navCommand.value = "hide")
+        : (navCommand.value = "show");
     };
 
-    return { handleToggle, toggle };
+    return { handleNavToggle, navToggle, navCommand };
   },
 };
 </script>
