@@ -1,25 +1,28 @@
 <template>
   <h1>p5 1</h1>
   <div class="p5-container">
-    <h3>{{ circleWidth.value }}</h3>
+    <!-- <h3>{{ circleWidth.value }}</h3> -->
     <!-- <ToolsLeft :circleWidth="circleWidth" /> -->
-    <div class="tools">
-      <form action="">
-        <input
-          type="range"
-          min="1"
-          max="500"
-          :value="circleWidth.value"
-          @change="handleWidth()"
-        />
-      </form>
-    </div>
-    <CanvasComponent :circleWidth="circleWidth" />
+    <!-- <div class="tools"> -->
+    <!-- <form action="">
+      <input
+        type="range"
+        min="1"
+        max="500"
+        :value="circleWidth.value"
+        @change="handleWidth()"
+      />
+    </form> -->
+    <Canvas2 />
   </div>
+  <!-- <CanvasComponent1 :circleWidth="circleWidth" /> -->
+  <!-- </div> -->
 </template>
 
 <script setup>
-import CanvasComponent from "../projects/P51/CanvasComponent.vue";
+import CanvasComponent1 from "../projects/P51/CanvasComponent1.vue";
+import Canvas2 from "../projects/P51/Canvas2.vue";
+
 import { ref } from "vue";
 const circleWidth = ref(300);
 function handleWidth() {
