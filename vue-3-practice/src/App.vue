@@ -11,6 +11,8 @@
       <!-- NAV / ROUTES -->
       <nav v-if="navToggle">
         <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/p5-1">p5-1</router-link>
         <router-link to="/muse1">Muse 1</router-link>
       </nav>
     </header>
@@ -21,20 +23,15 @@
   </div>
 </template>
 
-<script>
-import {
-  onBeforeMount,
-  onMounted,
-  onBeforeUpdate,
-  onUpdated,
-  onBeforeUnmount,
-  onUnmounted,
-  onActivated,
-  onDeactivated,
-  onErrorCaptured,
-} from "vue";
-
+<script setup>
 import { ref } from "vue";
+
+// METHODS
+const toggle = ref(true);
+
+const handleToggle = () => {
+  // alert("Moin!");
+  toggle.value = !toggle.value;
 
 export default {
   components: {},
