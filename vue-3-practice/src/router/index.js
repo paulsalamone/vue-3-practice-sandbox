@@ -22,6 +22,12 @@ const router = createRouter({
       path: "/p5-1",
       name: "p5-1",
       component: P51View,
+      path: "/muse1",
+      name: "muse1",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Muse1.vue"),
     },
   ],
 });
